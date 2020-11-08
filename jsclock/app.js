@@ -7,7 +7,7 @@ const now = new Date();
 
 const second =now.getSeconds();
 const secondDegrees = ((second/ 60)* 360) + 90;
-secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+secondHand.style.transform = `rotate(${secondDegrees}deg)`;
 
 const mins = now.getMinutes();
 const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
