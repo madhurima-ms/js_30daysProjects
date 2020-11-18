@@ -7,8 +7,32 @@
 img {
 padding: var(--spacing);
 background: var(--base);
-filter: var(--blur);
+filter:blur(var(--blur));
+}
+
+.h1 {
+color: var(--base);
 }
 input {
     width: 100px;
+}
+body{
+    text-align: center;
+}
+body {
+background:#193549;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-weight: 100;
+color: salmon;
+font-size: 50px;
+}
+
+.controls{
+margin-bottom: 50px;
+}
+
+a{
+    color: var (--base);
+    text-decoration: none;
+
 }
