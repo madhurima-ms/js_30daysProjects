@@ -9,30 +9,27 @@ padding: var(--spacing);
 background: var(--base);
 filter:blur(var(--blur));
 }
+.hl {
+    color: var(--base);
+  }
 
-.h1 {
-color: var(--base);
-}
-input {
-    width: 100px;
-}
-body{
+  /*
+    misc styles, nothing to do with CSS variables
+  */
+
+  body {
     text-align: center;
-}
-body {
-background:#193549;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-font-weight: 100;
-color: salmon;
-font-size: 50px;
-}
+    background: #193549;
+    color: white;
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+  }
 
-.controls{
-margin-bottom: 50px;
-}
+  .controls {
+    margin-bottom: 50px;
+  }
 
-a{
-    color: var (--base);
-    text-decoration: none;
-
-}
+  input {
+    width: 100px;
+  }
