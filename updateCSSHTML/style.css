@@ -1,0 +1,14 @@
+:root {
+    --base: yellow;
+    --blur: 10px;
+    --spacing: 10px;
+}
+
+img {
+padding: var(--spacing);
+background: var(--base);
+filter: var(--blur);
+}
+input {
+    width: 100px;
+}
