@@ -20,5 +20,16 @@ const people = [
   const comment= comments.find(comment=>comment.id===823423);
   console.table(comment);
 
-  const index= comments.findIndex(comment=>Comment.id===823423);
+  const index= comments.findIndex(comment => comment.id===823423);
   console.log(index);
+  
+  //delete the id of 823423
+  comments.splice(index, 1);
+  console.log(comments);
+ 
+
+//   const newcomment= [
+//          ...comments.slice(0, index),
+//         ...comments.slice(index + 1)
+//       ];
+//       console.log(newcomment);
