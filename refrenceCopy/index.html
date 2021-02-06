@@ -5,13 +5,78 @@
   <title>JS Reference VS Copy</title>
 </head>
 <body>
-
+    <STYLE type="text/css">
+        H2 { text-align: center}
+       </STYLE>
+<h2 >Object and Array Reference vs Copy</h2>
   <script>
    
     // start with strings, numbers and booleans
+    let myAge=27;
+    let yourAge= myAge;
+    console.log(myAge,yourAge);
+     myAge=23;
+    console.log(myAge,yourAge);
+
+// same as string
+    let love= "Emma";
+    let like=love;
+    console.log(love,like);
+    love="Vyas";
+    console.log(love,like);
+
+    // // and we want to make a copy of an array.
     let myGame= ["skipping", "bat", "hockey"];
-    let youGame= myGame;
-    console.log(youGame);   
+    const youGame = myGame.slice();
+    console.log(youGame,myGame);   
+
+     // You might think we can just do something like this:
+    youGame[2]="cricket";
+    console.log(myGame,youGame);
+    //Ow now the old array has also changed its position
+    
+
+    // or create a new array and concat the old one using spread operator in es6
+    const hisGame=[...myGame];
+    hisGame[0]="Heart";
+    console.log(hisGame,myGame);
+   // now when we update it, the original one isn't changed
+
+    // The same thing goes for objects, let's say we have a books object
+    const books={
+        page: 250,
+        author: "dale carneggie",
+        publisher: "eric johnson"
+    }
+    books.id="m12vs";
+    // we make a refrence to that obj
+    const kitab=books;
+    console.log(kitab); 
+    // we can make copy of tht object by assign operator
+    const novel= Object.assign({},books, {page: 345, author: "stephen thomos"});
+    console.log(novel);
+    console.clear();
+   
+    // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+
+
+    const wes = {
+      name: 'Bill',
+      age: 90,
+      social: {
+        twitter: '@billClinton',
+        facebook: 'bill.politician'
+      }
+    };
+console.log(wes);
+const hillary=Object.assign({},wes);
+console.log(hillary);
+
+
+const nick= JSON.parse(JSON.stringify(wes));
+nick.social.twitter="@coolsik";
+console.log(nick);
+
   </script>
   </body>
   </html>
