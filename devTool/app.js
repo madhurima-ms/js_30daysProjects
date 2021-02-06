@@ -29,13 +29,6 @@ console.log(p);
 console.dir(p);
 // console.clear();
 
-// //Grouping together 
-// dogs.forEach(dog=>{
-//     console.groupCollapsed(`${dog.name}`);
-//     console.log(`This is ${dog.name}`);
-//     console.log(`${dog.name} is ${dog.age} years old`);
-//     console.groupEnd(`${dog.name}`);
-// });
 
 
 
@@ -63,12 +56,19 @@ dogs.forEach(dog=>{
     console.count('Steve');
 
     // timing
-    console.time('fetching data');
-    fetch('https://api.github.com/users/wesbos')
-      .then(data => data.json())
-      .then(data => {
+    // console.time('fetching');
+    // fetch('https://api.github.com/users/madhurima-ms')
+    //   .then(data => data.json())
+    //   .then(data => {
+    //     console.timeEnd('fetching');
+    //    console.log(data);
+    //   });
+      console.time('fetching data');
+      fetch('https://twitter.com/madhurima_ms')
+      .then(data=>data.json())
+      .then(data =>{
         console.timeEnd('fetching data');
-       console.log(data);
+         console.log(data); 
       });
 
 //     
