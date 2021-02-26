@@ -6,4 +6,12 @@ function strip(bandName) {
   const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
 
 document.querySelector('#bands').innerHTML = sortedBands .map(band => `<li>${band}</li>`) .join('');
+
 console.log(sortedBands);
+
+// function article(bandName){
+//     return bandName.replace(/^(a |the |an )/i, '').trim();
+
+// }
+// const sortedBand = bands.sort((a,b)=>article(a) > article(b) ?1 : -1);
+// document.querySelector('#bands').innerHTML= sortedBand.map(band=>`<li>${band}</li>`).join('');
