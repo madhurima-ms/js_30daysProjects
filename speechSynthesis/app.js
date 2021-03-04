@@ -1,6 +1,6 @@
 const msg= new speechSynthesis();
 const values=[];
-const voiceDdrown= document.querySelector('name'=value);
+const voiceDrown= document.querySelector('name'=value);
 const options=document.querySelectorAll('[type="range"], [name="text"]');
 const speakButton= document.querySelector('#start');
 const stop=document.querySelector('#stop');
