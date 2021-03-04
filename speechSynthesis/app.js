@@ -1,4 +1,5 @@
-const msg= new speechSynthesis();
+
+const msg = new SpeechSynthesisUtterance();
 let voices = [];
   const voicesDropdown = document.querySelector('[name="voice"]');
   const options = document.querySelectorAll('[type="range"], [name="text"]');
