@@ -87,3 +87,33 @@ return obj;
 },{});
 console.log(transportation);
 
+let obj = {
+  a: 1,
+  b: 2,
+  c: {
+      age: 30
+  }
+};
+
+var objclone = Object.assign({},obj);
+console.log('objclone: ', objclone);
+
+var newobj= JSON.parse(JSON.stringify(obj));
+newobj.c.age=70;
+console.log('new obj', newobj);
+
+// for (let i = 0; i < 5; i++) {
+// 	setTimeout(function() { 
+//     console.log(i); }, i * 1000 );
+// }
+var b = 1;
+function outer(){
+   	var b = 2
+    function inner(){
+        var b = 3;
+        b++;
+        console.log(b)
+    }
+    inner();
+}
+outer();
