@@ -1,12 +1,15 @@
 
-const divs= document.querySelectorAll('.div');
+const divs= document.querySelectorAll('div');
 
 
-function logText(){
-    console.log(this);
+function logText(e){
+  //  e.stopPropagation();
+    console.log(this.classList.value);
 }
 
 
-divs.forEach(div=>div.addEventListener('click', logText,{
-
-}));
+divs.forEach(div => div.addEventListener('click', logText, {
+    capture: true,
+    once: true
+  
+  }));
