@@ -1,0 +1,1 @@
+const navUl= document.querySelectorAll(.)
